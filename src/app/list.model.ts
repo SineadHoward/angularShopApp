@@ -1,5 +1,5 @@
 export interface List {
     item: string;
-    price: string;
+    price: number;
     itemImage: string;
   }

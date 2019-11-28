@@ -14,7 +14,7 @@ const Schema = mongoose.Schema;
 
 const listSchema = new Schema({
   item:String,
-  price:String,
+  price:Number,
   itemImage:String
 });
 
