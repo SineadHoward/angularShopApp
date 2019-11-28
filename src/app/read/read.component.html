@@ -1,0 +1,20 @@
+
+
+<mat-accordion *ngFor="let list of MyList">
+    <mat-expansion-panel [expanded]="true" >
+    <mat-expansion-panel-header>
+    <mat-panel-title>
+    <h3> {{ list.item }} </h3>
+    </mat-panel-title>
+    <mat-panel-description>
+    <h3>{{ list.price }}</h3>
+    </mat-panel-description>
+    </mat-expansion-panel-header>
+    <img src="{{list.itemImage}}">
+    <mat-action-row>
+  <button mat-button [routerLink]="['/edit', list._id]" color="primary">EDIT</button>
+    
+    <button mat-button (click)="onDelete(list._id)" color="warn">DELETE</button>
+    </mat-action-row>
+    </mat-expansion-panel>
+    </mat-accordion>

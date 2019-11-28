@@ -1,0 +1,37 @@
+<mat-card>
+    <form (submit)="onEditList(listForm)" #listForm="ngForm">
+      <mat-form-field>
+          <label> Item List</label>
+        <input
+          matInput
+          type="text"
+          name="item"
+          ngModel={{list.item}}
+          required
+          #list="ngModel">
+      </mat-form-field>
+      <mat-form-field>
+          <label>item Price</label>
+        <textarea
+          matInput
+          name="price"
+          ngModel={{list.price}}
+          required
+          #content="ngModel"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+          <label>Item Image</label>
+        <textarea
+          matInput
+         rows="4"
+          name="itemImage"
+          ngModel={{list.itemImage}}
+          required
+          #content="ngModel"></textarea>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        color="accent"
+        type="submit">Edit Shopping List</button>
+    </form>
+  </mat-card>

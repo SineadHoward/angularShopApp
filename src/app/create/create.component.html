@@ -1,0 +1,40 @@
+<mat-card>
+    <form (submit)="onAddList(listForm)" #listForm="ngForm">
+      <mat-form-field>
+          <label> Item Name</label>
+        <input
+          matInput
+          type="text"
+          name="item"
+          ngModel
+          required
+          #item="ngModel">
+      </mat-form-field>
+      <mat-form-field>
+          <label>item Price</label>
+        <textarea
+          matInput
+          name="price"
+          ngModel
+          required
+          #content="ngModel"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+          <label>Item image</label>
+        <textarea
+          matInput
+         rows="4"
+          name="itemImage"
+          ngModel
+          required
+          #content="ngModel"></textarea>
+      </mat-form-field>
+     
+        
+      
+      <button
+        mat-raised-button
+        color="accent"
+        type="submit">Save Item</button>
+    </form>
+  </mat-card>
